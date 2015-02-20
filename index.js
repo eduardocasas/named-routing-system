@@ -26,14 +26,28 @@ module.exports = function(urlCollection, app) {
             }
         }
     };
-    app.locals.url = function(name) {
+    app.locals.url = function(name, parameters) {
+        var baseUrl;
+        var urlParameters;
         for (var i in urlCollection) {
             var url = urlCollection[i];
             if (url.name === name ) {
-            var urlBase = url.pattern.split(':');
-                return urlBase[0].toString();
+                urlParameters = url.pattern.split(':');
+                baseUrl = urlParameters[0].toString();
+                break;
             }
         };
+        if (parameters == undefined) {
+            return baseUrl;
+        } else {
+            urlParameters.shift();
+            var json = (typeof parameters == "string") ? JSON.parse(parameters) : parameters;
+            var collection = [];
+            for (var i in urlParameters) {
+                collection.push(json[urlParameters[i].replace('/', '')]);
+            }
+            return baseUrl+collection.join('/');
+        }
     };
 
 };
