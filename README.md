@@ -1,2 +1,8 @@
-# named-routing-system
+# Named Rouing System
 Another named routing system for node.js (express.js).
+
+## Install
+
+```
+npm install named-routing-system
+```

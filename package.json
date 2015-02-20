@@ -1,0 +1,23 @@
+{
+  "name": "named-routing-system",
+  "version": "1.0.0",
+  "description": "Another named routing system for node.js (express.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eduardocasas/named-routing-system.git"
+  },
+  "keywords": [
+    "routes",
+    "express.js"
+  ],
+  "author": "eduardocasas <eduardo.casas.lopez@gmail.com> (http://www.eduardocasas.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardocasas/named-routing-system/issues"
+  },
+  "homepage": "https://github.com/eduardocasas/named-routing-system"
+}
