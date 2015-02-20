@@ -1,4 +1,4 @@
-var routes = function(urlCollection, app) {
+module.exports = function(urlCollection, app) {
 
     for (var i in urlCollection) {
         var url = urlCollection[i];
@@ -37,5 +37,3 @@ var routes = function(urlCollection, app) {
     };
 
 };
-
-module.exports = exports = routes;
