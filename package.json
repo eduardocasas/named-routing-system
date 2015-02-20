@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/eduardocasas/named-routing-system/issues"
   },
-  "homepage": "https://github.com/eduardocasas/named-routing-system"
+  "homepage": "https://github.com/eduardocasas/named-routing-system",
+  "dependencies": {}
 }
