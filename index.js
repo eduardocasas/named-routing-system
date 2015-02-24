@@ -41,10 +41,14 @@ module.exports = function(urlCollection, app) {
             return baseUrl;
         } else {
             urlParameters.shift();
-            var json = (typeof parameters == "string") ? JSON.parse(parameters) : parameters;
             var collection = [];
             for (var i in urlParameters) {
-                collection.push(json[urlParameters[i].replace('/', '')]);
+                var slugs = urlParameters[i].split('/');
+                collection.push(parameters[slugs[0]]);
+                slugs.shift();
+                for (var i in slugs) {
+                    collection.push(slugs[i]);
+                }
             }
             return baseUrl+collection.join('/');
         }
