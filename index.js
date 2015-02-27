@@ -50,7 +50,7 @@ module.exports = function(urlCollection, app) {
                     collection.push(slugs[i]);
                 }
             }
-            return baseUrl+collection.join('/');
+            return baseUrl+collection.join('/').replace('//', '/');
         }
     };
 

@@ -1,6 +1,6 @@
 {
   "name": "named-routing-system",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Another named routing system for node.js (express.js)",
   "main": "index.js",
   "scripts": {
